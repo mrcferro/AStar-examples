@@ -1,4 +1,4 @@
-db.homicides.insert( 
+db.Homicides.insert( 
  {
    _id: {
       victimSSN: NumberInt(100)
@@ -6,7 +6,8 @@ db.homicides.insert(
    sex: NumberInt(1),
  }
 );
-db.homicides.insert( 
+
+db.Homicides.insert( 
  {
    _id: {
       victimSSN: NumberInt(101)
@@ -16,7 +17,7 @@ db.homicides.insert(
 );
 
 
-db.homicides.insert(
+db.Homicides.insert(
  {
 	_id: {
 	   vi : {
@@ -25,7 +26,7 @@ db.homicides.insert(
 	},
 	occurrenceNum: NumberInt(67),
 	local: {
-	  type: "point",
+	  type: "Point",
 	  coordinates: [-78,-71]
 	},
 	hom_perp: {
@@ -34,7 +35,7 @@ db.homicides.insert(
  }
 );
 
-db.homicides.insert(
+db.Homicides.insert(
  {
 	_id: {
 		vi : {
@@ -43,45 +44,45 @@ db.homicides.insert(
 	},
 	occurrenceNum: NumberInt(67),
 	local: {
-		type: "point",
+		type: "Point",
 		coordinates: [-78,-71]
 	},
-	pe: {
+	hom_perp: {
 		perpetratorSSN: [37,38]
 	}
  }
 );
 
 
-db.homicides.insert(
+db.Homicides.insert(
  {
    _id: {
      perpetratorSSN: NumberInt(37)
    },
+   sex: NumberInt(2),
+   recidivistStatus: NumberInt(1),
    hom_perp : {
 	   vi: {
 		   victimSSN: [100,101]
 	   }
-   },
-   sex: NumberInt(2),
-   recidivistStatus: NumberInt(1)
+   }
  }
 );
 
-db.homicides.insert(
+db.Homicides.insert(
  {
    _id: {
      perpetratorSSN : NumberInt(38),
    },
-   hom_perp : {
+   sex: NumberInt(4),
+   recidivistStatus: NumberInt(4),
+   hom_perp: {
 	   vi: {
 		   victimSSN: [100,101]
 	   }
-   },
-   sex: NumberInt(4),
-   recidivistStatus: NumberInt(4)
+   }
  }
-);
+)
 
 
 

@@ -106,13 +106,19 @@ db.createCollection( "Homicides", {
 					hom_perp: {
 						type: "object",
 						description: "REF:homicide",
-						required: [ "vi"],
+						required: ["vi"],
 						properties: {
 							vi: {
-								type: "array",
-								minItems: 0,
-								items: {
-									type: "number"
+								type: "object",
+								required: ["victimSSN"],
+								properties: {
+									victimSSN: {
+										type: "array",
+										minItems: 0,
+										items: {
+											type: "number"
+										}
+									}
 								}
 							}
 						}
