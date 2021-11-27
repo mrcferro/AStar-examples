@@ -8,11 +8,17 @@ db.createCollection( "Homicides", {
         required: [ "_id", "vi", "occurrenceNum", "local", "hom_perp"],
         properties: {
           _id: {
-            bsonType: "int",
+            bsonType: "object",
+			required: ["homicideId"],
+			properties:{
+			   homicideId: { 
+			      bsonType: "int"
+			   }
+			}
           },
 		  vi: {
 			bsonType: "object",
-			required: [ "victimSSN"],
+			required: ["victimSSN"],
 			properties: {
 			  victimSSN: {
 				bsonType: "int"
