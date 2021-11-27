@@ -20,10 +20,11 @@ db.Homicides.insert(
 db.Homicides.insert(
  {
 	_id: {
-	   vi : {
-			victimSSN: NumberInt(100)
-		}
+	   homicideId: NumberInt(30)
 	},
+	vi: {
+	   victimSSN: NumberInt(100)
+	},	
 	occurrenceNum: NumberInt(67),
 	local: {
 	  type: "Point",
@@ -38,10 +39,11 @@ db.Homicides.insert(
 db.Homicides.insert(
  {
 	_id: {
-		vi : {
-			victimSSN: NumberInt(101)
-		}
+	   homicideId: NumberInt(31)
 	},
+	vi : {
+		victimSSN: NumberInt(101)
+	},	
 	occurrenceNum: NumberInt(67),
 	local: {
 		type: "Point",
@@ -62,9 +64,7 @@ db.Homicides.insert(
    sex: NumberInt(2),
    recidivistStatus: NumberInt(1),
    hom_perp : {
-	   vi: {
-		   victimSSN: [100,101]
-	   }
+      homicideId: [100,101]
    }
  }
 );
@@ -77,13 +77,7 @@ db.Homicides.insert(
    sex: NumberInt(4),
    recidivistStatus: NumberInt(4),
    hom_perp: {
-	   vi: {
-		   victimSSN: [100,101]
-	   }
+      homicideId: [100,101]
    }
  }
 )
-
-
-
-
